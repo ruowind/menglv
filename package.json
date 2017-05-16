@@ -1,0 +1,40 @@
+{
+  "name": "menglv",
+  "version": "0.0.1",
+  "description": "A desktop application for lvmama fed",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:win64": "rimraf dist && electron-packager ./ LVU --platform=win32 --arch=x64 --overwrite --out ./dist --electron-version=1.6.6 --icon=assets/app.ico"
+  },
+  "repository": "https://github.com/ruowind/menglv",
+  "keywords": [
+    "Electron",
+    "Lvmama"
+  ],
+  "author": "GengFeng",
+  "license": "MIT",
+  "devDependencies": {
+    "electron-packager": "^8.7.0"
+  },
+  "dependencies": {
+    "base64-img": "^1.0.3",
+    "browser-sync": "^2.18.11",
+    "chalk": "^1.1.3",
+    "cssbeautify": "^0.3.1",
+    "electron": "1.6.6",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.3.1",
+    "gulp-less": "^3.3.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^2.1.2",
+    "gulp-util": "^3.0.8",
+    "html2js": "^0.2.0",
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
+    "node-lwip": "^0.2.1",
+    "rimraf": "^2.6.1",
+    "through2": "^2.0.3",
+    "watchr": "^3.0.1"
+  }
+}

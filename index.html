@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>萌驴 - 驴妈妈前端工作流</title>
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+  <div class="wraper">
+    <div class="welcome hide" id="js-welcome">
+      <div class="logo"></div>
+      <div class="title">萌驴</div>
+      <div class="subtitle">骐骥一跃，不能十步；驽马十驾，功在不舍。</div>
+      <!--<div class="welcome-example" id="js-example">导入示例项目</div>-->
+      <div class="tips">
+        <div class="icon-tips"></div>
+        <div class="tips__content">添加一个项目</div>
+      </div>
+    </div>
+    <div class="projects">
+      <div class="projects__header">
+        Projects
+      </div>
+      <ul class="projects__list" id="js-project-list">
+
+      </ul>
+    </div>
+    <div class="bottom-fixed">
+      <div class="tasks" id="js-tasks">
+        <span data-task="dev" id="js-build-dev" class="tasks__button">开发</span>
+        <span data-task="dist" class="tasks__button">编译</span>
+        <span data-task="ftp" class="tasks__button">复制</span>
+        <!--<span data-task="zip" class="tasks__button">打包</span>-->
+      </div>
+      <div class="logs" id="js-log">
+        <span class="icon icon-clean" id="js-clean-log" title="清除日志"></span>
+        <div class="logs__inner">
+
+        </div>
+      </div>
+    </div>
+    <div class="bottom-bar">
+      <!--<span class="icon icon-add" id="js-new-project" title="新建项目"></span>-->
+      <span class="icon icon-del" id="js-del-project" title="删除项目"></span>
+      <span class="icon icon-open" title="打开项目">
+            <input class="bottom-bar__open" id="js-open-project" type="file" webkitdirectory multiple>
+        </span>
+      <span class="icon icon-setting" id="js-setting-button" title="全局设置"></span>
+      <span class="icon icon-log" id="js-log-button" title="查看日志"></span>
+      <span class="bottom-bar__status" id="js-logs-status"></span>
+    </div>
+  </div>
+  <div class="setting hide" id="js-setting">
+    <a href="javascript:;" id="js-setting-close" class="icon icon-close"></a>
+    <!--<a href="https://github.com/ruowind/weflow" id="js-help" class="icon icon-help"></a>-->
+    <h2><span id="setting-project-name">全局</span>设置</h2>
+    <div class="setting__section" id="js-workspace">
+      <div class="setting__hd">SVN路径</div>
+      <div class="setting__bd">
+        <div class="ui-text">
+          <label>页面路径</label>
+          <input type="text" name="svnPage" data-workspace="true" id="js-svn-page" value="">
+        </div>
+        <div class="ui-text">
+          <label>资源路径</label>
+          <input type="text" name="svnStatic" data-workspace="true" id="js-svn-static" value="">
+        </div>
+      </div>
+    </div>
+
+    <div class="setting__section">
+      <div class="setting__hd">功能</div>
+      <div class="setting__bd">
+        <div class="ui-checkbox">
+          <input type="checkbox" name="livereload" checked id="livereload">
+          <label for="livereload">开启 LiveReload 浏览器自动刷新</label>
+        </div>
+        <div class="ui-checkbox">
+          <input type="checkbox" name="reversion" id="reversion">
+          <label for="reversion">开启 文件版本 (MD5) 去缓存解决方案</label>
+        </div>
+        <div class="ui-checkbox">
+          <input type="checkbox" name="compress" id="compress">
+          <label for="compress">开启 js/css 压缩</label>
+        </div>
+        <div class="ui-checkbox">
+          <input type="checkbox" name="support2x" id="support2x">
+          <label for="support2x">开启 2x图合并</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="setting__section">
+      <div class="setting__hd">设置</div>
+      <div class="setting__bd">
+        <div class="ui-text">
+          <label>js路径</label>
+          <input type="text" name="jsPath" id="js-path" value="">
+        </div>
+        <div class="ui-text">
+          <label>css路径</label>
+          <input type="text" name="cssPath" id="css-path" value="">
+        </div>
+        <div class="ui-text">
+          <label>less路径</label>
+          <input type="text" name="lessPath" id="less-path" value="">
+        </div>
+        <div class="ui-text">
+          <label>sass路径</label>
+          <input type="text" name="sassPath" id="sass-path" value="">
+        </div>
+        <div class="ui-text">
+          <label>img路径</label>
+          <input type="text" name="imgPath" id="img-path" value="">
+        </div>
+        <div class="ui-text" id="setting-project-path">
+          <label>project路径</label>
+          <input type="text" name="projectPath" data-project="true" id="project-path" value="">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+  require('./src/app')
+</script>
+
+</html>
