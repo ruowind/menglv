@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build:win64": "rimraf dist && electron-packager ./ LVU --platform=win32 --arch=x64 --overwrite --out ./dist --electron-version=1.6.6 --icon=assets/app.ico"
+    "build:win64": "rimraf dist && electron-packager ./ MengLv --platform=win32 --arch=x64 --overwrite --out ./dist --electron-version=1.6.8 --icon=assets/app.ico"
   },
   "repository": "https://github.com/ruowind/menglv",
   "keywords": [
@@ -22,7 +22,7 @@
     "browser-sync": "^2.18.11",
     "chalk": "^1.1.3",
     "cssbeautify": "^0.3.1",
-    "electron": "1.6.6",
+    "electron": "^1.6.8",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.3.1",
     "gulp-less": "^3.3.0",
