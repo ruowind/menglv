@@ -60,7 +60,7 @@ function main(config) {
                     let IMG_DOMAIN_REG = new RegExp('.*?(' + config.imgPath + '/)');
                     imgUrl = imgUrl.replace(IMG_DOMAIN_REG, function () {
                         let index = Math.floor((Math.random() * cdn.length));
-                        return cdn[index] + '/img/' + config.projectPath;
+                        return cdn[index] + '/img/' + config.projectPath + '/';
                     });
                 }
 
