@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build:win64": "rimraf dist && electron-packager ./ MengLv --platform=win32 --arch=x64 --overwrite --out ./dist --electron-version=1.6.8 --icon=assets/app.ico"
+    "build:win64": "rimraf dist && electron-packager ./ MengLv --platform=win32 --arch=x64 --overwrite --out ./dist --electron-version=1.6.10 --icon=assets/app.ico"
   },
   "repository": "https://github.com/ruowind/menglv",
   "keywords": [
@@ -15,19 +15,20 @@
   "author": "GengFeng",
   "license": "MIT",
   "devDependencies": {
-    "electron-packager": "^8.7.0"
+    "electron": "^1.6.10",
+    "electron-packager": "^8.7.1"
   },
   "dependencies": {
     "base64-img": "^1.0.3",
-    "browser-sync": "^2.18.11",
+    "browser-sync": "^2.18.12",
     "chalk": "^1.1.3",
     "cssbeautify": "^0.3.1",
-    "electron": "^1.6.8",
     "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.3.1",
+    "gulp-clean-css": "^3.4.1",
     "gulp-less": "^3.3.0",
+    "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0",
-    "gulp-uglify": "^2.1.2",
+    "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
     "html2js": "^0.2.0",
     "jquery": "^3.2.1",
