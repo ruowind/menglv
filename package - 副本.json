@@ -16,8 +16,7 @@
   "license": "MIT",
   "devDependencies": {
     "electron": "^1.6.11",
-    "electron-packager": "^8.7.1",
-    "electron-rebuild": "^1.5.11"
+    "electron-packager": "^8.7.1"
   },
   "dependencies": {
     "base64-img": "^1.0.3",
@@ -27,14 +26,14 @@
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.4.1",
     "gulp-less": "^3.3.0",
+    "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
-    "node-lwip": "^0.2.1",
     "html2js": "^0.2.0",
     "jquery": "^3.2.1",
-    "vue": "^2.3.4",
     "lodash": "^4.17.4",
+    "node-lwip": "^0.2.1",
     "rimraf": "^2.6.1",
     "through2": "^2.0.3",
     "watchr": "^3.0.1"

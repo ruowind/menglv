@@ -3,7 +3,7 @@
 let path = require('path'),
     util = require('./util'),
     Packer = require('./pack'),
-    lwip = require('node-lwip'),
+    // lwip = require('node-lwip'),
     _ = require('lodash');
 
 function openImg(filePath) {
