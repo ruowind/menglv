@@ -11,6 +11,7 @@
         "windows": {
             "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron.cmd"
         },
-        "program": "${workspaceRoot}/main.js"
+        "program": "${workspaceRoot}/main.js",
+        "protocol": "legacy"
     }]
 }
