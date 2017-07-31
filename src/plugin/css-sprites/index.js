@@ -25,8 +25,10 @@ function main(config) {
             }
 
             let res = cssParser(fileString);
-
-            let spritesCss = await imgGen(file, res.map, this, config);
+            let spritesCss = '';
+            if (res.map.length > 0) {
+                spritesCss = await imgGen(file, res.map, this, config);
+            }
             let allCss = cssbeautify(res.content + spritesCss);
             file.contents = new Buffer(allCss);
         }

@@ -105,7 +105,7 @@ Generator.prototype = {
         let imageUrl = path.relative(path.dirname(this.cssFile.path), image_file.path).replace(/\\/g, '/');
 
         if (is2x) {
-            this.css += '@media only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min--moz-device-pixel-ratio: 2),only screen and (-webkit-min-device-pixel-ratio: 2.5),only screen and (min-resolution: 240dpi) {';
+            this.css += '@media only screen and (-webkit-min-device-pixel-ratio: 1.5),only screen and (min--moz-device-pixel-ratio:1.5),only screen and (-o-min-device-pixel-ratio:3/2),only screen and (min-device-pixel-ratio:1.5) {';
         }
 
         if (this.settings.ie_bug_fix) {
@@ -348,7 +348,7 @@ Generator.prototype = {
             current;
         if (images[zero]) {
             if (is2x) {
-                this.css += '@media only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min--moz-device-pixel-ratio: 2),only screen and (-webkit-min-device-pixel-ratio: 2.5),only screen and (min-resolution: 240dpi) {';
+                this.css += '@media only screen and (-webkit-min-device-pixel-ratio: 1.5),only screen and (min--moz-device-pixel-ratio:1.5),only screen and (-o-min-device-pixel-ratio:3/2),only screen and (min-device-pixel-ratio:1.5) {';
             }
 
             for (i = 0, length = images[zero].length; i < length; i++) {
@@ -431,8 +431,10 @@ Generator.prototype = {
                 let image2x_ = await openImg(getImage(bg.get2xImageUrl()));
                 bg.image2x_ = image2x_;
             }
+            if (image_) {
+                insertToObject(list_, direct, bg);
+            }
 
-            insertToObject(list_, direct, bg);
         }
 
         // await that.fill(list_['x'], 'x');
