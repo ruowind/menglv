@@ -4,7 +4,7 @@ const gulp = require('gulp')
 const sourceMaps = require('gulp-sourcemaps')
 const less = require('gulp-less')
 // const sass = require('../plugin/sass')
-const sass = require('gulp-sass')
+const sass = require('../lib/gulp-sass')
 const _ = require('lodash')
 const path = require('path')
 
