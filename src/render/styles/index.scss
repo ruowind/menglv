@@ -1,0 +1,345 @@
+.main-wrap {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", sans-serif;
+}
+
+html,
+body,
+.main-wrap {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+h1,
+h2 {
+    font-weight: normal;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    margin: 0;
+}
+
+a {
+    color: #42b983;
+}
+
+
+/*
+    icon
+*/
+
+.icon {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.icon-add {
+    width: 16px;
+    height: 16px;
+    background-image: url(./assets/icon-add.png);
+    background-size: 16px 16px;
+}
+
+.icon-del {
+    width: 16px;
+    height: 16px;
+    background-image: url(./assets/icon-del.png);
+    background-size: 16px 16px;
+}
+
+.icon-setting {
+    width: 16px;
+    height: 16px;
+    background-image: url(./assets/icon-setting.png);
+    background-size: 16px 16px;
+}
+
+.icon-log {
+    width: 14px;
+    height: 14px;
+    background-image: url(./assets/icon-log-off.png);
+    background-size: 14px 14px;
+}
+
+.icon-log_green {
+    background-image: url(./assets/icon-log-on.png);
+    background-size: 14px 14px;
+}
+
+.icon-tips {
+    width: 25px;
+    height: 51px;
+    background-image: url(./assets/icon-tips.png);
+    background-size: 25px 51px;
+}
+
+.icon-open {
+    width: 16px;
+    height: 12px;
+    background-image: url(./assets/icon-open.png);
+    background-size: 16px 12px;
+}
+
+.icon-finder {
+    width: 32px;
+    height: 32px;
+    background-image: url(./assets/icon_folder.png);
+    background-size: 32px 32;
+}
+
+.icon-finder:hover {
+    background-image: url(./assets/icon_folder_hover.png);
+}
+
+.icon-info {
+    width: 16px;
+    height: 16px;
+    background-image: url(./assets/Setting_hover@2x.png);
+    background-size: 16px 16px;
+}
+
+.icon-close {
+    width: 20px;
+    height: 20px;
+    background-image: url(./assets/icon-close.png);
+    background-size: 20px 20px;
+}
+
+.icon-help {
+    width: 20px;
+    height: 20px;
+    background-image: url(./assets/icon-help.png);
+    background-size: 20px 20px;
+}
+
+.icon-clean {
+    width: 15px;
+    height: 15px;
+    background-image: url(./assets/icon-clean.png);
+    background-size: 15px 15px;
+}
+
+.projects {
+    background-image: linear-gradient(to bottom, #009BDB, #05CAE8 100%);
+    background-repeat: repeat-x;
+    padding: 50px 0;
+    color: #fff;
+    .projects-header {
+        font-size: 20px;
+        padding: 0 15px;
+    }
+    .projects__list {
+        overflow-y: auto;
+        height: 200px;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+    .projects__list_high {
+        padding-bottom: 100px;
+    }
+    .projects__list-item {
+        position: relative;
+        display: flex;
+        align-items: center; // width: 100%;
+        height: 50px;
+        padding: 0 10px 0 26px;
+    }
+    .projects__list-item:hover {
+        background-color: #F1F1F1;
+    }
+    .projects__list-content {
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; // max-width: 100%;
+        padding-right: 30px;
+    }
+    .projects__list-item_current {
+        // background-color: rgba(93, 211, 109, .1);
+        background-color: #40b4e4;
+    }
+    .projects__list-item_current:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 2px;
+        height: 100%;
+        background-color: #ffffff;
+    }
+    .projects__list-item_current:hover {
+        background-color: #40b4e4;
+    }
+    .projects__list-item_watching:before {
+        content: '';
+        position: absolute;
+        left: 12px;
+        top: 22px;
+        width: 6px;
+        height: 6px;
+        border-radius: 8px;
+        background-color: #ffffff;
+        animation: breathe ease-in-out 2s infinite alternate;
+    }
+    .projects__list-item .icon-finder {
+        margin-right: 15px;
+        cursor: pointer;
+    }
+    .projects__list .icon:hover,
+    .projects__list .icon:active {
+        opacity: .8;
+    }
+    .projects__name {
+        display: block;
+        font-size: 18px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 100%;
+        transition: all 1s ease;
+    }
+    .projects__name:focus {
+        outline: none;
+    }
+    .projects__path {
+        display: none;
+        font-size: 12px;
+        margin-top: 3px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 100%;
+    }
+    .projects__list-item .icon-info {
+        display: none;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .projects__list-item_current .icon-info,
+    .projects__list-item_current .projects__path {
+        display: block;
+    }
+}
+
+.tool-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 12px 10px 12px 12px;
+    box-sizing: border-box;
+    border-top: 1px solid #DEE0E2;
+    .tool-1 {
+        float: left;
+        a {
+            display: block;
+            float: left;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+        }
+        .add {
+            background: url(./assets/find2.png) center no-repeat;
+        }
+        .delete {
+            background: url(./assets/delete.png) center no-repeat;
+        }
+        .setting {
+            background: url(./assets/skin_setting_normal.png) center no-repeat;
+        }
+    }
+    .tool-2 {
+        float: right;
+        a {
+            display: block;
+            height: 32px;
+            margin-right: 8px;
+            padding: 0 15px;
+            border: 1px solid #00A3E1;
+            border-radius: 4px;
+            line-height: 32px;
+            text-align: center;
+            color: #00A3E1;
+            font-size: 13px;
+            box-sizing: border-box;
+            float: left;
+            cursor: pointer;
+            &:hover {
+                background-color: #00A3E1;
+                color: #fff;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+
+/*
+    logs
+*/
+
+.logs {
+    position: relative;
+    height: 0;
+    // background-color: #EEE;
+    font-size: 12px;
+    color: #5D6D58;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.logs:hover .icon-clean {
+    opacity: .5;
+}
+
+.logs__inner {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.logs_show {
+    height: 165px;
+    padding: 10px;
+}
+
+.logs:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200%;
+    height: 1px; // background-color: #ddd;
+    transform-origin: 0 0;
+    transform: scale(.5);
+}
+
+.logs .icon-clean {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.logs .icon-clean:hover {
+    opacity: 1;
+}
+
+.logs__time {
+    color: #999;
+}

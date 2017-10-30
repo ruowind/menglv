@@ -4,7 +4,7 @@ const app = electron.app
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow
 // Module to dontrol application menus.
-const Menu = electron.Menu;
+const Menu = electron.Menu
 
 const path = require('path')
 const url = require('url')
@@ -12,24 +12,29 @@ const url = require('url')
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
 
-function createWindow() {
+function createWindow () {
   // remove windows menu.
-  Menu.setApplicationMenu(null);
+  Menu.setApplicationMenu(null)
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    width: 376,
-    minHeight: 572,
+    width: 400,
+    minHeight: 600,
     resizable: false,
     title: '萌驴 - 驴妈妈前端工作流',
-    frame: true
+    frame: false,
+    transparent: true
   })
 
-  // and load the index.html of the app.
-  mainWindow.loadURL(url.format({
-    pathname: path.join(__dirname, 'index.html'),
-    protocol: 'file:',
-    slashes: true
-  }))
+  if (process.env.NODE_ENV === 'development') {
+    mainWindow.loadURL('http://localhost:8080/')
+  } else {
+    // and load the index.html of the app.
+    mainWindow.loadURL(url.format({
+      pathname: path.join(__dirname, 'index.html'),
+      protocol: 'file:',
+      slashes: true
+    }))
+  }
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools()
@@ -67,3 +72,4 @@ app.on('activate', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+require('./src/main/ipc')
